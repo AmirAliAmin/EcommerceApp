@@ -5,7 +5,7 @@ import { assets } from '../assets/assets';
 import TotalCartAmount from '../components/TotalCartAmount';
 
 export default function Cart() {
-  const {products, currency, cardItems, updateQuantity} = useContext(ShopContext);
+  const {products, currency, cardItems, updateQuantity, navigate} = useContext(ShopContext);
   const [cardData, setCardData] = useState([])
 
   useEffect(() => {
@@ -54,10 +54,10 @@ export default function Cart() {
       <div className='flex justify-end my-20'>
         <div className='w-full sm:w-[450px]'>
           <TotalCartAmount/>
-          
-
+          <div className='w-full text-end'>
+            <button onClick={()=>navigate('/place-order')} className='bg-black text-white text-sm my-8 px-8 py-3 '>PROCEED TO CHECKOUT </button>
+          </div>
         </div>
-
       </div>
 
     </div>
