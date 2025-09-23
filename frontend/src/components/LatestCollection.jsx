@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title'
 import ProductItem from './ProductItem';
+import {motion} from 'framer-motion'
+
 
 export default function LatestCollection() {
     const { products } = useContext(ShopContext)
@@ -11,7 +13,12 @@ export default function LatestCollection() {
       setLatestProducts(products.slice(0,10))
     }, [])
   return (
-    <div className='my-10'>
+    <motion.div 
+    initial={{opacity:0, x:300}}
+    transition={{duration:1}}
+    whileInView={{opacity:1, x:0}}
+    viewport={{once:true}}
+    className='my-10'>
       <div className='text-center py-8 text-3xl'>
         <Title text1={"LATEST"} text2={"COLLECTION"}/>
         <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -25,6 +32,6 @@ export default function LatestCollection() {
           ))
         }
       </div>
-    </div>
+    </motion.div>
   )
 }

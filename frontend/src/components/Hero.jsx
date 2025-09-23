@@ -1,9 +1,15 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import {motion} from 'framer-motion'
 
 export default function Hero() {
   return (
-    <div className='flex flex-col sm:flex-row border border-gray-400'>
+    <motion.div 
+    initial={{opacity:0, y:100}}
+    transition={{duration:1.5}}
+    whileInView={{opacity:1, y:0}}
+    viewport={{once:true}}
+    className='flex flex-col sm:flex-row border border-gray-400'>
         {/* Hero Left side */}
         <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>
             <div className='text-[#414141]'>
@@ -21,6 +27,6 @@ export default function Hero() {
         {/* Hero Right Side */}
         
         <img src={assets.hero_img} className='w-full sm:w-1/2' alt="" />
-    </div>
+    </motion.div>
   )
 }
