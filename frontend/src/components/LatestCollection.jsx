@@ -13,11 +13,7 @@ export default function LatestCollection() {
       setLatestProducts(products.slice(0,10))
     }, [])
   return (
-    <motion.div 
-    initial={{opacity:0, x:300}}
-    transition={{duration:1}}
-    whileInView={{opacity:1, x:0}}
-    viewport={{once:true}}
+    <div 
     className='my-10'>
       <div className='text-center py-8 text-3xl'>
         <Title text1={"LATEST"} text2={"COLLECTION"}/>
@@ -32,6 +28,6 @@ export default function LatestCollection() {
           ))
         }
       </div>
-    </motion.div>
+    </div>
   )
 }
