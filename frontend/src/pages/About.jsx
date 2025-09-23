@@ -31,15 +31,15 @@ export default function About() {
       <div className='flex flex-col md:flex-row text-sm mb-20'>
         <div className='border px-10 md:px-16 py-5 sm:py-10 flex flex-col gap-5'>
           <b>Quality Assurance:</b>
-          <p className='text-gray-700'>Lorem ipsum dolor sit, amet conse</p>
+          <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla, fugiat rem iste illo consequatur reprehenderit sit eum blanditi</p>
         </div>
         <div className='border px-10 md:px-16 py-5 sm:py-10 flex flex-col gap-5'>
           <b>Convenience:</b>
-          <p className='text-gray-700'>Lorem ipsum dolor sit, amet consectetur adip</p>
+          <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, harum inventore eligendi deserunt magnam, dolorum corporis nostrum quo aliquam minus</p>
         </div>
         <div className='border px-10 md:px-16 py-5 sm:py-10 flex flex-col gap-5'>
           <b>Exceptional Customer Services:</b>
-          <p className='text-gray-700'>Lorem ipsum dolor sit, amet consectete</p>
+          <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae possimus pariatur quasi, quas enim eveniet iste ipsam ipsum similique repellat explicabo</p>
         </div>
       </div>
       <NewsletterBox/>
