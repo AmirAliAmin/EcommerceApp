@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title'
 import ProductItem from './ProductItem';
-import {motion} from 'framer-motion'
 
 
 export default function LatestCollection() {
@@ -24,7 +23,6 @@ export default function LatestCollection() {
         {
           latestProducts.map((item,index)=>(
             <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
-
           ))
         }
       </div>

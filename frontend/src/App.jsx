@@ -32,7 +32,6 @@ export default function App() {
         <Route path='/order' element={<Orders/>}/>
       </Routes>
       <Footer/>
-      
     </div>
   )
 }
