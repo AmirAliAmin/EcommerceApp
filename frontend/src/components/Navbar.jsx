@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react'
 import {assets} from '../assets/assets'
 import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
+import { AuthContext } from '../context/AuthContext'
 
 export default function Navbar() {
     const [visible, setVisible] = useState(false)
     const { setShowSearch, showSearch, getCartCount} = useContext(ShopContext)
+    const {logout} = useContext(AuthContext)
 
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
@@ -36,7 +38,7 @@ export default function Navbar() {
                     <div className='flex flex-col gap-2 w-36 py-3 bg-slate-100 text-gray-500 rounded'>
                         <p className='cursor-pointer hover:text-black'>My Profile</p>
                         <p className='cursor-pointer hover:text-black'>Order</p>
-                        <p className='cursor-pointer hover:text-black'>Logout</p>
+                        <p onClick={logout} className='cursor-pointer hover:text-black'>Logout</p>
                     </div>
                 </div>
             </div>
