@@ -601,6 +601,7 @@ export const products = [
         bestseller: false
     },
     {
+        
         _id: "aaabq",
         name: "Kid Tapered Slim Fit Trouser",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
